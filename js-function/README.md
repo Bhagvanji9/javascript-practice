@@ -28,3 +28,28 @@
 * ES6 introduced two important new JavaScript keywords: let and const.
 * These two keywords provide Block Scope in JavaScript.
 * Variables declared inside a { } block cannot be accessed from outside the block.
+
+#### Function expressions
+* The function keyword can be used to define a function inside an expression.
+* You can also define functions using the function declaration or the arrow syntax.
+  const square = function (number) {
+       return number * number;
+       };
+  const x = square(4); // x gets the value 16
+ 
+#### Calling functions
+* Calling the function actually performs the specified actions with the indicated parameters. For example, if you define the function square, you could call it as follows:
+
+     * square(5);
+     
+* A function can call itself. For example, here is a function that computes factorials recursively:
+   
+      * function factorial(n) {
+           if (n === 0 || n === 1) {
+                return 1;
+           } else {
+                return n * factorial(n - 1);
+                  }
+           }  
+           
+              
