@@ -77,3 +77,12 @@ console.log(square);
 const square = function (n) {
   return n * n;
 };
+
+//recursion
+function loop(x) {
+    if (x >= 10) {
+      return;
+    }
+    loop(x + 1); // the recursive call
+  }
+  loop(0);
