@@ -63,3 +63,17 @@ function getScore() {
 }
 
 console.log(getScore()); // Returns "Chamakh scored 5"
+  
+// function hoisting
+// this function gives output
+console.log(square(5)); // 25
+
+function square(n) {
+  return n * n;
+}
+ 
+// this function gives error
+console.log(square); 
+const square = function (n) {
+  return n * n;
+};

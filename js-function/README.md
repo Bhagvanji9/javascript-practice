@@ -40,7 +40,7 @@
 #### Calling functions
 * Calling the function actually performs the specified actions with the indicated parameters. For example, if you define the function square, you could call it as follows:
 
-     * square(5);
+      * square(5);
      
 * A function can call itself. For example, here is a function that computes factorials recursively:
    
@@ -50,6 +50,9 @@
            } else {
                 return n * factorial(n - 1);
                   }
-           }  
+           } 
+           
+#### Function hoisting
+* function hoisting mean the, function being called before it's declared. -fucntion expression and arrow fucntion can not be hoisted.             
            
               
