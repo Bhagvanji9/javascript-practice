@@ -12,3 +12,19 @@
 -> We  can pass Object or Array as parameter of function.
    * When you pass an object as a parameter, if the function changes the object's properties, that change is visible outside the function.
    * When you pass an array as a parameter, if the function changes any of the array's values, that change is visible outside the function.
+   
+#### JavaScript Scope
+
+##### Global scope
+* Variables declared Globally (outside any function) have Global Scope.
+* Global variables can be accessed from anywhere in a JavaScript program.
+
+##### Function Scope
+* JavaScript has function scope: Each function creates a new scope.
+* Variables defined inside a function are not accessible (visible) from outside the function.
+
+##### Block Scope
+* Before ES6 (2015), JavaScript had only Global Scope and Function Scope.
+* ES6 introduced two important new JavaScript keywords: let and const.
+* These two keywords provide Block Scope in JavaScript.
+* Variables declared inside a { } block cannot be accessed from outside the block.
