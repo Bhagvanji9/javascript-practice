@@ -1,2 +1,8 @@
-# javascript-practice
-This repo about all that topics which i learned in javascript
+# javascript
+-> JavaScript is the world's most popular programming language.
+
+->JavaScript is the programming language of the Web.
+
+->JavaScript is easy to learn.
+ 
+-> I started with basics of javascript.
