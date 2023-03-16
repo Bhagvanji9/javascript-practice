@@ -73,10 +73,10 @@ function square(n) {
 }
  
 // this function gives error
-console.log(square); 
-const square = function (n) {
-  return n * n;
-};
+// console.log(square); 
+// const square = function (n) {
+//   return n * n;
+// };
 
 //recursion
 function loop(x) {
@@ -86,3 +86,17 @@ function loop(x) {
     loop(x + 1); // the recursive call
   }
   loop(0);
+
+  // this key word
+function getThis() {
+    return this;
+  }
+  
+  const obj1 = { name: "obj1" };
+  const obj2 = { name: "obj2" };
+  
+  obj1.getThis = getThis;
+  obj2.getThis = getThis;
+  
+  console.log(obj1.getThis());
+  console.log(obj2.getThis());
