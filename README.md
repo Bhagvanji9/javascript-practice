@@ -13,3 +13,6 @@
 ### Function
 * My all practice for function you can see in js-function folder.
 
+### Variables
+
+### Arrays
