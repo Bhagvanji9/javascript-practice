@@ -16,3 +16,5 @@
 ### Variables
 
 ### Arrays
+
+### Objects
