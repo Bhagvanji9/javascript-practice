@@ -3,7 +3,12 @@
 * **Free variable:** A free variable is simply a variable which is not declared inside a given function, but is used inside it. 
 * **[Example of closure](./closure.js)**
 * Before the start closure we have to knowledge about execution context and lexical environment.
-* You can see those topics here **[(execution context and lexical environment)](./closure.js)** 
+  
+**The lexical environment contains two components:**
+1. Environment record: It is the actual place where the variable and function declarations are stored.
+2. Reference to the outer environment: It means it has access to its outer (parent) lexical environment.
+
+* You can see those topics here **[(execution context)](./../../js-internalworking/README.md)** 
 
 ### Scope Chain
 * we know that an environment has access to its parent’s environment, and its parent environment has access to its parent environment, and so on. This set of identifiers that each environment has access to is called “scope.” We can nest scopes into a hierarchical chain of environments known as the “scope chain”.
