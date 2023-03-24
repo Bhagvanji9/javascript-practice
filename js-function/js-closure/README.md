@@ -23,11 +23,9 @@
         }
         grandParent();
 ```
+![Screenshot from 2023-03-24 11-20-13](https://user-images.githubusercontent.com/124878578/227438696-63d32ac6-78af-4879-b3f0-71754a436637.png)
 * In above example you can see there are three functions grandParent() ,parent() and child().
 * Here we can see that in function ```child()```, there only one variable value3. but this function required value1 $ value2 also,therefor it look into it's parent which is ```parent()``` here it can find the value2 but still value1 is missing.
 * Now function child() look into it's parent's parent which in ```grandParet()``` and there it can access value1 and then print ```(`${value1} ${value2} ${value3}`)```
   into console.
 * Here, this hierarchy is known as scope chain.
-
-
-    
