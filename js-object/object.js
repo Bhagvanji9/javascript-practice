@@ -14,11 +14,10 @@ console.log(person.name);
 console.log(person.name[0]);
 console.log(person.age);
 
-// An object property can itself be an object
+// An object property can itself be an object or array
 const person1 = {
   name: ["Bob", "Smith"],
 };
-//is equal to
 
 const person2 = {
   fullname: {
@@ -46,7 +45,7 @@ const user = {
 };
 console.log(user.getName());
 
-example of Comparing objects
+// example of Comparing objects
 const fName1 = {
   first: "bhagvanji",
 };
@@ -56,5 +55,3 @@ const fName2 = {
 const fName3 = fName1;
 console.log(fName1 == fName2);
 console.log(fName1 == fName3);
-
-
