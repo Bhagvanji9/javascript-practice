@@ -1,43 +1,40 @@
 // simple function
 function myfunc(a, b) {
-    return a + b;
+  return a + b;
 }
-console.log(myfunc(2, 3))
+console.log(myfunc(2, 3));
 
 // use Object as Parameters of function
 // we can change value of an objects using function
 const cars = {
-    name: "abc",
-    company: "xyz",
-    price: "100000",
-
-}
+  name: "abc",
+  company: "xyz",
+  price: "100000",
+};
 console.log(cars.name); // output abc
 
 function Object(cars) {
-    cars.name = "ABC";
+  cars.name = "ABC";
 }
 Object(cars);
 console.log(cars.name); //output ABC
 
 // we ca also use an array as parameter and change array elements
-let arr = [4,6,5,8];
+let arr = [4, 6, 5, 8];
 console.log(arr[0]); //output 4
 
-
 function myFunc(theArr) {
-    theArr[0] = 3;
-  } 
-  myFunc(arr);
-  console.log(arr[0]); // output 30
+  theArr[0] = 3;
+}
+myFunc(arr);
+console.log(arr[0]); // output 30
 
 function fcn(n) {
+  const age = 5 - n;
+  return age;
+}
 
-    const age = 5-n
-    return age
-  };
-
-  // The following variables are defined in the global scope
+// The following variables are defined in the global scope
 const num1 = 20;
 const num2 = 3;
 const name = "Chamakh";
@@ -51,7 +48,7 @@ console.log(multiply()); // Returns 60
 
 // A nested function example
 function getScore() {
-// The following variables are defined in the function scope.
+  // The following variables are defined in the function scope.
   const num1 = 2;
   const num2 = 3;
 
@@ -63,7 +60,7 @@ function getScore() {
 }
 
 console.log(getScore()); // Returns "Chamakh scored 5"
-  
+
 // function hoisting
 // this function gives output
 console.log(square(5)); // 25
@@ -71,33 +68,32 @@ console.log(square(5)); // 25
 function square(n) {
   return n * n;
 }
- 
+
 // this function gives error
-// console.log(square); 
-// const square = function (n) {
-//   return n * n;
-// };
+console.log(square);
+const square = function (n) {
+  return n * n;
+};
 
 //recursion
 function loop(x) {
-    if (x >= 10) {
-      return;
-    }
-    loop(x + 1); // the recursive call
+  if (x >= 10) {
+    return;
   }
-  loop(0);
+  loop(x + 1); // the recursive call
+}
+loop(0);
 
-  // this key word
+// this key word
 function getThis() {
-    return this;
-  }
-  
-  const obj1 = { name: "obj1" };
-  const obj2 = { name: "obj2" };
-  
-  obj1.getThis = getThis;
-  obj2.getThis = getThis;
-  
-  console.log(obj1.getThis());
-  console.log(obj2.getThis());
+  return this;
+}
 
+const obj1 = { name: "obj1" };
+const obj2 = { name: "obj2" };
+
+obj1.getThis = getThis;
+obj2.getThis = getThis;
+
+console.log(obj1.getThis());
+console.log(obj2.getThis());
