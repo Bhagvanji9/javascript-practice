@@ -77,3 +77,50 @@ grandParent();
 ![Alt text](../../Pictures/Screenshots/Screenshot%20from%202023-03-24%2013-40-45.png)
 
 * In above images you can see one by one execution contexts are push into call stack.
+
+## Event loop
+* **What does it actually mean when we say JavaScript is single threaded?**
+* It means that the main thread where JavaScript code is run, runs in one line at a time manner and there is no possibility of running code in parallel.
+![Alt text](https://media.geeksforgeeks.org/wp-content/uploads/20201130202346/singlethreadedjavascript.png)
+*** 
+![Alt text](https://cdn.datainfinities.com/images/10-event-loop.png)
+**In above diagram you can see those 4 topics.**
+1. Web APIs
+2. Callback Queue
+3. Microtask Queue
+4. Event loops
+
+### Web APIs
+* Web APIs or Browser APIs are built into your web browser and are able to expose data from the browser and surrounding computer environment and do useful complex things with it. setTimeout(), DOM APIs, fetch(), local storage, location, and console are some examples for Web APIs. They are not part of the JavaScript language, but they are built on top of the core JavaScript language, providing you with extra superpowers to use in your JavaScript code. 
+
+### Callback Queue 
+* Callback Queue or Macrotask Queue is where the callback function gets pushed to, and waits for the execution. Let us dive deep into the callback queue with an example.
+```
+  function Start() {
+      console.log("Start");
+  } ;
+  Start();
+  setTimeout(abc, 3000);
+      function abc() {
+        console.log("ABC");
+      }
+  
+  function End() {
+      console.log("End");  } ;
+  End();
+```
+* Here, we have a callback function abc(), that is to be executed after 5 seconds of time. After 5 seconds, the callback function abc() does not get directly pushed into the call stack for execution instead it will be pushed into the callback queue. The call stack may be busy with the execution of some other functions here ( Start() & End()). The callback queue keeps all callback functions in a queue that are ready for execution and waits until the call stack gets free. When the call stack is free, the event loop pops the callback function from callback queue and pushes it to the call stack.
+* The callback queue was working under the First In First Out(FIFO) principle.
+
+### Microtask Queue
+* Microtask Queue is similar to the Callback Queue(macrotask queue), but microtask queue has a higher priority than the callback queue. All the callback functions coming through promises and mutation observer will go inside the microtask queue. 
+* For example, in the case of fetch(), it returns a promise and, this callback function will get pushed into the microtask queue. Promise handling always has a higher priority than setTimeout or setInterval. So the event loop gives higher priority to the microtask queue and then looks into callback queue.
+
+### Event loops
+* The event loop keeps running continuously and monitoring the call stack and callback queue. When the call stack gets empty and the event loop sees some callback functions waiting in the microtask queue or callback queue(macrotask queue) for execution. Then, the event loop pops the callback functions one by one from the microtask queue and callback queue and gets pushed into the call stack for execution. The event loop acts like a gatekeeper for the callback queue.
+* The microtask queue has higher priority than the callback queue(macrotask queue).
+
+
+
+
+
