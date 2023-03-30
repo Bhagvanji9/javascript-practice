@@ -1,0 +1,11 @@
+const body = document.body;
+const h2 = document.createElement("h2");
+const data1 = document.createTextNode("Heading 2");
+h2.appendChild(data1);
+const div1 = document.getElementById("div1");
+console.log("🚀 ~ file: main.js:6 ~ div1:", div1);
+div1.appendChild(h2);
+// div1.remove();
+h2.style.color = "red";
+div1.style.fontSize = "50px";
+div1.style.backgroundColor = "yellow";
