@@ -32,6 +32,7 @@
     ```
 1.  **Creation phase:** In this phase, the JavaScript engine creates the execution context and sets up the script's environment. It determines the values of variables and functions and sets up the scope chain for the execution context.
    * In above example memory allocate like this:
+   
    ![Alt text](https://media.geeksforgeeks.org/wp-content/uploads/20210211222239/Capture-660x298.JPG)
 
 2. **Execution phase:** In this phase, the JavaScript engine executes the code in the execution context. It processes any statements or expressions in the script and evaluates any function calls.
@@ -70,11 +71,11 @@
 }
 grandParent();
 ```
-![Alt text](../../Pictures/Screenshots/Screenshot%20from%202023-03-24%2013-39-01.png)
-![Alt text](../../Pictures/Screenshots/Screenshot%20from%202023-03-24%2013-39-27.png)
-![Alt text](../../Pictures/Screenshots/Screenshot%20from%202023-03-24%2013-39-35.png)
-![Alt text](../../Pictures/Screenshots/Screenshot%20from%202023-03-24%2013-40-33.png)
-![Alt text](../../Pictures/Screenshots/Screenshot%20from%202023-03-24%2013-40-45.png)
+![Screenshot from 2023-03-24 13-39-01](https://user-images.githubusercontent.com/124878578/227472090-d1e2130e-18fd-4ae3-9bd0-3b8d8905a721.png)
+![Screenshot from 2023-03-24 13-39-27](https://user-images.githubusercontent.com/124878578/227472140-8aa1a3db-f276-4da3-bacf-142ea8dfc654.png)
+![Screenshot from 2023-03-24 13-39-35](https://user-images.githubusercontent.com/124878578/227472181-7cac7b26-eeee-4150-b323-38c45828ba55.png)
+![Screenshot from 2023-03-24 13-40-33](https://user-images.githubusercontent.com/124878578/227473227-330d3560-0256-490e-bd5c-7a743fb02a9e.png)
+![Screenshot from 2023-03-24 13-40-45](https://user-images.githubusercontent.com/124878578/227473586-1083aa41-53b1-4792-8c37-e110f948d70a.png)
 
 * In above images you can see one by one execution contexts are push into call stack.
 
