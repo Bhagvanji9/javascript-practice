@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event propagation</title>
+</head>
+<body>
+    <style>
+        body{
+            display: flex;
+        }
+        #grandParent{
+            display: flex;
+            background-color: aqua;
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+            align-items: center;
+            justify-content: center;
+        }
+        #parent{
+            display: flex;
+            background-color: rgb(238, 255, 0);
+            height: 150px;
+            width: 150px;
+            border: 2px solid black;
+            align-items: center;
+            justify-content: center;
+        }
+        #child{ display: flex;
+            background-color: rgb(66, 70, 9);
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            align-items: center;
+            justify-content: center;}
+        #grandParent1{
+            display: flex;
+            background-color: aqua;
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+            align-items: center;
+            justify-content: center;
+        }
+        #parent1{
+            display: flex;
+            background-color: rgb(238, 255, 0);
+            height: 150px;
+            width: 150px;
+            border: 2px solid black;
+            align-items: center;
+            justify-content: center;
+        }
+        #child1{ display: flex;
+            background-color: rgb(66, 70, 9);
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+            align-items: center;
+            justify-content: center;
+        }
+        #child2{
+            display: flex;
+            background-color: rgb(180, 182, 161);
+            height: 25px;
+            width: 25px;
+            border: 2px solid black;
+            align-items: center;
+            justify-content: center;
+          }
+    </style>
+    <div id="grandParent">
+        <p>capturing</p>
+        <div id="parent">
+        <div id="child"></div>
+        </div>
+    </div>
+    <div id="grandParent1">
+        <p>bubbling</p>
+        <div id="parent1">
+            <div id="child1">
+                <div id="child2"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // capturing
+           document.getElementById("child").addEventListener('click',()=>console.log('child clicked!!'),true)
+           document.getElementById("parent").addEventListener('click', () => console.log('parent clicked!!'),true)
+           document.getElementById("grandParent").addEventListener('click', () => console.log('grandparent clicked!!'),true)
+        // bubbling
+            document.getElementById("child1").addEventListener('click', () => console.log('child1 clicked!!'))
+            document.getElementById("parent1").addEventListener('click', () => console.log('parent1 clicked!!'))
+            document.getElementById("grandParent1").addEventListener('click', () => console.log('grandparent1 clicked!!'),true)
+              document.getElementById("child2").addEventListener('click', () => console.log('child2 clicked!!'),true)
+    </script>
+</body>
+</html>
